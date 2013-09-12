@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.6.0.min.js"></script>
+<script defer="defer">
+    var stage = new Kinetic.Stage({
+        container: 'container',
+        width: 800,
+        height: 600
+    });
+
+    var layer = new Kinetic.Layer();
+
+    var virtualGroceryCart = new Kinetic.Rect({
+        x: 0,
+        y: 300,
+        width: 300,
+        height: 300,
+        fill: 'green',
+        stroke: 'black',
+        strokeWidth: 4
+    });
+
+
+    var conveyerBelt = new Kinetic.Rect({
+        x: 0,
+        y: 0,
+        width: 800,
+        height: 300,
+        fill: 'blue',
+        stroke: 'black',
+        strokeWidth: 4
+    });
+
+    var infoArea = new Kinetic.Rect({
+        x: 0,
+        y: 0,
+        width: 800,
+        height: 300,
+        fill: 'blue',
+        stroke: 'black',
+        strokeWidth: 4
+    });
+
+    // add the shape to the layer
+    layer.add(virtualGroceryCart);
+    layer.add(conveyerBelt);
+
+    // add the layer to the stage
+    stage.add(layer);
+</script>
+</body>
+</html>
